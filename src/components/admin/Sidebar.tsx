@@ -26,7 +26,7 @@ export default function Sidebar() {
           </div>
         </div>
         
-        <Link href="/(admin)" className="flex items-center gap-2 px-3 py-1.5 hover:bg-black/5 rounded-sm transition-colors text-black/60 hover:text-black">
+        <Link href="/admin" className="flex items-center gap-2 px-3 py-1.5 hover:bg-black/5 rounded-sm transition-colors text-black/60 hover:text-black">
           <Home className="w-4 h-4" />
           <span>Home</span>
         </Link>
