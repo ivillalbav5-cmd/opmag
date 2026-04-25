@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Plus, Settings, Home, LayoutDashboard } from 'lucide-react';
+import { FileText, Plus, Settings, Home, LayoutDashboard, Search, Clock } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Sidebar() {
@@ -14,7 +14,18 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <nav className="flex-1 px-2 py-4 space-y-0.5">
+      <nav className="flex-1 px-2 py-4 space-y-0.5 overflow-y-auto">
+        <div className="flex items-center justify-between px-3 py-1.5 hover:bg-black/5 rounded-sm transition-colors text-black/60 hover:text-black cursor-pointer group mb-2">
+          <div className="flex items-center gap-2">
+            <Search className="w-4 h-4" />
+            <span>Search</span>
+          </div>
+          <div className="flex items-center gap-1 opacity-60">
+            <kbd className="font-sans text-[10px] border border-black/20 rounded px-1">⌘</kbd>
+            <kbd className="font-sans text-[10px] border border-black/20 rounded px-1">K</kbd>
+          </div>
+        </div>
+        
         <Link href="/(admin)" className="flex items-center gap-2 px-3 py-1.5 hover:bg-black/5 rounded-sm transition-colors text-black/60 hover:text-black">
           <Home className="w-4 h-4" />
           <span>Home</span>
@@ -28,6 +39,7 @@ export default function Sidebar() {
           <span>Settings</span>
         </div>
 
+        {/* Workspace */}
         <div className="pt-6 pb-2">
           <div className="px-3 text-xs font-semibold text-black/40">Workspace</div>
         </div>
@@ -37,11 +49,35 @@ export default function Sidebar() {
             <FileText className="w-4 h-4 text-black/40" />
             <span>Notas</span>
           </div>
-          <Plus className="w-4 h-4 text-black/40 opacity-0 group-hover:opacity-100 transition-opacity" />
+          <button title="Nueva Nota" className="opacity-0 group-hover:opacity-100 transition-opacity p-0.5 hover:bg-black/10 rounded-sm">
+            <Plus className="w-4 h-4 text-black/40" />
+          </button>
         </div>
-        <div className="flex items-center gap-2 px-3 py-1.5 hover:bg-black/5 rounded-sm transition-colors pl-8 cursor-pointer text-black/70">
-          <FileText className="w-4 h-4 text-black/40" />
-          <span>Borrador: Entrevista Duki</span>
+
+        <div className="mt-2 space-y-0.5">
+          <div className="flex items-center gap-2 px-3 py-1.5 hover:bg-black/5 rounded-sm transition-colors pl-8 cursor-pointer text-black/70">
+            <FileText className="w-4 h-4 text-black/40" />
+            <span className="truncate">Borrador: Entrevista Duki</span>
+          </div>
+        </div>
+
+        {/* Recientes */}
+        <div className="pt-6 pb-2">
+          <div className="flex items-center gap-2 px-3 text-xs font-semibold text-black/40">
+            <Clock className="w-3 h-3" />
+            <span>Recientes</span>
+          </div>
+        </div>
+        
+        <div className="space-y-0.5">
+          <div className="flex items-center gap-2 px-3 py-1.5 hover:bg-black/5 rounded-sm transition-colors pl-8 cursor-pointer text-black/70">
+            <FileText className="w-4 h-4 text-black/40" />
+            <span className="truncate">La Nueva Ola del Under</span>
+          </div>
+          <div className="flex items-center gap-2 px-3 py-1.5 hover:bg-black/5 rounded-sm transition-colors pl-8 cursor-pointer text-black/70">
+            <FileText className="w-4 h-4 text-black/40" />
+            <span className="truncate">Review: YSY A en GEBA</span>
+          </div>
         </div>
       </nav>
     </aside>
