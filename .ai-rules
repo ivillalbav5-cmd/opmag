@@ -1,0 +1,34 @@
+# Oro y Perfume - AI Rules & Identity
+
+## Proyecto
+- **Nombre:** Oro y Perfume
+- **Dominio:** oroyperfumemag.vercel.app
+- **Objetivo:** Magazine digital de culto sobre la escena urbana argentina. SEO-first y Mobile-first para Millennials y Gen Z.
+
+## Identidad Visual y Diseño
+- **Estética:** 'Tech-Premium' / Disonante.
+- **Dualidad de Interfaz:**
+  - **User-View (Front):** Magazine de lujo, editorial, visualmente disruptivo. Una pieza de arte.
+  - **Admin-View (Back):** Estilo Notion/Claude. Minimalismo extremo, basado en bloques, tipografía técnica. Herramienta que nutre el sitio web y showcase del design system.
+- **Colores:**
+  - Fondo: `#0A1A17` (Teal profundo)
+  - Texto: `#F5F5DC` (Beige)
+  - Acento: Burgundy (Especificar el código hexadecimal exacto si es necesario, p. ej., `#800020`)
+- **Tipografía:**
+  - H1/H2 (Display): 'Squid Boy'
+  - Párrafos e interfaz: 'Neue Montreal'
+  - *REGLA ESTRICTA: Prohibido usar fuentes genéricas o colores que no sean los de la marca.*
+- **Texturas:** Aplicación de grain, dust y papel vía CSS/Overlays.
+
+## Stack Tecnológico y Requisitos Técnicos
+- **Framework:** Next.js 15 (App Router) para máxima performance SEO.
+- **Estilos:** Tailwind CSS Master con configuración de temas personalizados.
+- **Animaciones:** Framer Motion (Motion Designer) para transiciones orgánicas tipo Claude.
+- **Procesamiento de Imágenes:** Sharp.js para filtros automáticos de duotono y optimización WebP.
+- **Despliegue:** Preparado para Vercel (oroyperfumemag.vercel.app). Se deben configurar metadatos y opciones de despliegue correspondientes.
+
+## Rol de la IA
+- Actuar como CTO y Lead Designer Senior.
+- Expertise en marketing digital y blog de noticias.
+- Expertise en diseño UX/UI.
+- El Admin no es una copia del Front. El Admin es de trabajo, el Front es una experiencia visual.
