@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 import "@/styles/textures.css";
+
+const figtree = Figtree({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Oro y Perfume | Magazine Digital",
@@ -13,10 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="h-full antialiased">
+    <html lang="es" className={`${figtree.variable} h-full antialiased`}>
       {/* 
         Nota: Agregamos font-sans como default para el body. 
-        En producción se deben cargar las fuentes 'Squid Boy' y 'Neue Montreal'
+        En producción se deben cargar las fuentes 'Squid Boy'
         mediante @font-face en globals.css o next/font/local si son archivos locales.
       */}
       <body className="min-h-full flex flex-col font-sans bg-brand-teal text-brand-beige">
